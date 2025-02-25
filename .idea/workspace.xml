@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a8391fb-2163-417f-b6f3-794f606708db" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/object_detection/cross_validation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/object_detection/weightedDataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2a8391fb-2163-417f-b6f3-794f606708db" name="Changes" comment="Adding cross_validation and weightedDataset script from marin's toolbox. Importing news function get_classes and make_yolo_row in fifty_one_utils.py. Correcting get_classes function. Suppressing csv2yolo script because useless. and updating main jupyter file to perform the training">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_detection/KFoldValidation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_detection/classes_BIIGLE.py" beforeDir="false" afterPath="$PROJECT_DIR$/object_detection/annotation_biigle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_detection/csv2yolo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_detection/fifty_one_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/object_detection/fifty_one_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_detection/spliter.py" beforeDir="false" afterPath="$PROJECT_DIR$/object_detection/spliter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_detection/training.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +172,7 @@
       <workItem from="1740146462774" duration="61000" />
       <workItem from="1740146541306" duration="1477000" />
       <workItem from="1740148141310" duration="3155000" />
-      <workItem from="1740469426823" duration="8364000" />
+      <workItem from="1740469426823" duration="9792000" />
     </task>
     <task id="LOCAL-00001" summary="Initiation commit">
       <option name="closed" value="true" />
@@ -216,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740148303907</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adding cross_validation and weightedDataset script from marin's toolbox. Importing news function get_classes and make_yolo_row in fifty_one_utils.py. Correcting get_classes function. Suppressing csv2yolo script because useless. and updating main jupyter file to perform the training">
+      <option name="closed" value="true" />
+      <created>1740478520693</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740478520693</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +251,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initiation commit" />
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Adding cross_validation and weightedDataset script from marin's toolbox. Importing news function get_classes and make_yolo_row in fifty_one_utils.py. Correcting get_classes function. Suppressing csv2yolo script because useless. and updating main jupyter file to perform the training" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding cross_validation and weightedDataset script from marin's toolbox. Importing news function get_classes and make_yolo_row in fifty_one_utils.py. Correcting get_classes function. Suppressing csv2yolo script because useless. and updating main jupyter file to perform the training" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
