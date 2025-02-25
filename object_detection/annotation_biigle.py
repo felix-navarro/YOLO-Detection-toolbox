@@ -1,6 +1,29 @@
 import pandas as pd
 import os
 
+# Get annotated images path from Biigle csv annotations report
+def get_annotated_images(report_file, image_dir):
+
+    # Validation des entrées
+    if not os.path.isdir(image_dir):
+        raise FileNotFoundError(f"Le répertoire {image_dir} n'existe pas.")
+    if not os.path.isfile(report_file):
+        raise FileNotFoundError(f"Le fichier {report_file} n'existe pas.")
+
+    # Import csv annotation report
+    report = pd.read_csv(report_file)
+
+    # Vérification de la colonne 'filename'
+    if 'filename' not in report.columns:
+        raise ValueError(f"Le fichier {report_file} ne contient pas la colonne 'filename'.")
+
+    # Extraction des images annotées
+    annotated_images = report['filename'].unique()
+
+    # Création du chemin complet pour chaque image
+    return [os.path.join(image_dir, image) for image in annotated_images]
+
+
 def extract_level(x, level="all"):
     """
     Extrait un niveau hiérarchique spécifique d'une chaîne donnée.

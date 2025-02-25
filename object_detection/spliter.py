@@ -3,7 +3,7 @@ from PIL import Image
 from shapely.geometry import Polygon
 import fiftyone as fo
 from tqdm import tqdm
-import fifty_one_utils as fou
+from object_detection import fifty_one_utils as fou
 import os
 
 

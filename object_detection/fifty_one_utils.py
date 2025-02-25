@@ -11,7 +11,22 @@ from fiftyone import ViewField as F
 import cv2
 from shutil import copy2
 import object_detection.biigle_utils as biigle_utils
-from object_detection import classes_BIIGLE as cb
+from object_detection import annotation_biigle as ab
+
+def make_yolo_row(label, target):
+    xtl, ytl, w, h = label.bounding_box
+    xc = xtl + 0.5 * w
+    yc = ytl + 0.5 * h
+    return "%d %f %f %f %f" % (target, xc, yc, w, h)
+
+def get_classes(dataset, field = "detections"):
+    if dataset.default_classes:
+        return dataset.default_classes
+    label_list = []
+    for sample in dataset:
+        if sample.detections is not None:
+            label_list.extend(detect.label for detect in sample[field].detections)
+    return list(set(label_list))
 
 def relative_to_absolute(bbox, w, h):
     x, y, width, height = bbox
@@ -121,7 +136,7 @@ def import_image_csv_report(report_file, image_dir, level = "all"):
     # If level is different than all replace label_name by ask label-level or lowest label-level
     if level != "all":
         report["label_name"] = report["label_hierarchy"].dropna().apply(
-                lambda x: cb.extract_level(x, level)
+                lambda x: ab.extract_level(x, level)
             )
 
     report['points'] = report.points.apply(lambda x: literal_eval(str(x)))
